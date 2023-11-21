@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rad_for_lv_for_bt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:id="@+id/select"
+                android:background="@drawable/back_select"
+                android:backgroundTint="#FFFFFF"
+                android:fontFamily="@font/labgrotesque_medium"
+                android:outlineAmbientShadowColor="@android:color/transparent"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:paddingLeft="23dp"
+                android:paddingRight="20dp"
+                android:text=""
+                android:textColor="#FFAC4D" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/back_select"
+                android:backgroundTint="#03F2F2F2"
+
+                android:fontFamily="@font/labgrotesque_medium"
+                android:outlineAmbientShadowColor="@android:color/transparent"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:paddingLeft="23dp"
+                android:paddingRight="20dp"
+                android:text=""
+                android:textColor="#999999" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ButtonTest1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+
+                android:drawableLeft="@drawable/bag_orn_top_buttons"
+                android:fontFamily="@font/labgrotesque_medium"
+                android:outlineAmbientShadowColor="@android:color/transparent"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:paddingLeft="23dp"
+                android:paddingRight="20dp"
+                android:text="Доставка"
+                android:textColor="#FFAC4D" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ButtonTest2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00FFFFFF"
+                android:drawableLeft="@drawable/home_grey_top_buttons"
+                android:fontFamily="@font/labgrotesque_medium"
+                android:outlineAmbientShadowColor="@android:color/transparent"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                android:paddingLeft="23dp"
+                android:paddingRight="20dp"
+                android:text="Столовая"
+                android:textColor="#999999" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

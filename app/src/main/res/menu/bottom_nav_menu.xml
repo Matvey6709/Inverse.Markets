@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Магазины"
+        android:icon="@drawable/shop_icon_for_bottom_nav"
+        android:id="@+id/shop_for_bottom_nav"/>
+    <item android:title="Меню"
+        android:icon="@drawable/menu_icon_for_bottom_nav"
+        android:id="@+id/menu_for_bottom_nav"/>
+    <item android:title="Корзина"
+        android:icon="@drawable/basket_icon_for_bottom_nav"
+        android:id="@+id/basket_for_bottom_nav"/>
+    <item android:title="Профиль"
+        android:icon="@drawable/profile_icon_for_bottom_nav"
+        android:id="@+id/profile_for_bottom_nav"/>
+</menu>

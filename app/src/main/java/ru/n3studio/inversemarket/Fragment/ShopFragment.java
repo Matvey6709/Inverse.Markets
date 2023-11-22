@@ -41,7 +41,6 @@ public class ShopFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_shop, null, true);
-
         icon_swich();
 
         RecyclerView recyclerView = v.findViewById(R.id.rv_main_supermarket);

@@ -26,14 +26,16 @@ public class Adapter_for_supermarket_tovar extends RecyclerView.Adapter<Adapter_
     @NonNull
     @Override
     public Adapter_for_supermarket_tovar.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View row = LayoutInflater.from(parent.getContext()).inflate(R.layout.supermarket_lv_main, parent, false);
+        View row = LayoutInflater.from(parent.getContext()).inflate(R.layout.tovar_in_supermarket, parent, false);
         return new ViewHolder(row);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.imageView.setImageResource(recycleview_lists.get(position).getImg());
-        holder.textView.setText(recycleview_lists.get(position).getTime());
+        holder.price.setText(recycleview_lists.get(position).getPrice());
+        holder.mass.setText(recycleview_lists.get(position).getMass());
+        holder.name.setText(recycleview_lists.get(position).getName());
     }
 
 
@@ -45,11 +47,15 @@ public class Adapter_for_supermarket_tovar extends RecyclerView.Adapter<Adapter_
     }
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
-        TextView textView;
+        TextView price;
+        TextView mass;
+        TextView name;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.imageView_for_main_lv);
-            textView = itemView.findViewById(R.id.text_main_for_lv);
+            imageView = itemView.findViewById(R.id.img_tovar);
+            price = itemView.findViewById(R.id.price);
+            mass = itemView.findViewById(R.id.mass);
+            name = itemView.findViewById(R.id.name);
         }
     }
 }

@@ -7,12 +7,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class recycleview_list2 {
     Integer img;
+    String price;
+    String mass;
+    String name;
 
-    public recycleview_list2(Integer img, String time) {
+    public recycleview_list2(Integer img, String price, String mass, String name) {
         this.img = img;
-        this.time = time;
+        this.price = price;
+        this.mass = mass;
+        this.name = name;
     }
-
 
     public Integer getImg() {
         return img;
@@ -22,16 +26,29 @@ public class recycleview_list2 {
         this.img = img;
     }
 
-    public String getTime() {
-        return time;
+    public String getPrice() {
+        return price;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
-    String time;
+    public String getMass() {
+        return mass;
+    }
 
+    public void setMass(String mass) {
+        this.mass = mass;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         public ViewHolder(@NonNull View itemView) {

@@ -23,6 +23,15 @@ public class Inf_supermarket_Activity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.eat1_rv1);
         recyclerView.setHasFixedSize(true);
 //        recyclerView.setLayoutManager(new LinearLayoutManager(this , RecyclerView.HORIZONTAL, false));
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String value = extras.getString("name");
+            System.out.println(value);
+            String value2 = extras.getString("url_img");
+            System.out.println(value2);
+            //The key argument here must match that used in the other activity
+        }
         AbsolutefitLayourManager layourManager = new AbsolutefitLayourManager(this, 1, RecyclerView.HORIZONTAL, false);
         layourManager.generateDefaultLayoutParams();
         recyclerView.setLayoutManager(layourManager);

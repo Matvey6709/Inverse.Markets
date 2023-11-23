@@ -33,7 +33,7 @@ public class Adapter_for_main_rv extends RecyclerView.Adapter<Adapter_for_main_r
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imageView.setImageResource(recycleview_lists.get(position).getImg());
+        holder.imageView.setBackground(recycleview_lists.get(position).getImg());
         holder.textView.setText(recycleview_lists.get(position).getTime());
     }
 

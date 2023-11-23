@@ -28,16 +28,18 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="230 ₽  "
+                    android:text="230 ₽ "
                     android:textSize="12dp"
                     android:id="@+id/price"
                     android:fontFamily="@font/labgrotesque_medium"
                     android:textColor="#FF8D28"/>
-                <ImageView
-                    android:layout_width="3dp"
-                    android:layout_height="3dp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/ic_launcher_background"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="·"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/labgrotesque_medium"
+                    android:textColor="#E6D1BF"/>
                 <TextView
                     android:id="@+id/mass"
                     android:fontFamily="@font/labgrotesque_medium"
@@ -64,7 +66,7 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:layout_marginBottom="8dp"
                     android:drawableLeft="@drawable/basket_icon_white"

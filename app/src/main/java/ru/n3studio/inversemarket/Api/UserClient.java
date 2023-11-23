@@ -8,7 +8,7 @@ import retrofit2.http.Header;
 
 public interface UserClient  {
     @GET("api/products/shops/")
-    Call<Shops> getShops(@Header("Authorization") String token);
+    Call<ResponseBody> getShops(@Header("Authorization") String token);
 
 
 }

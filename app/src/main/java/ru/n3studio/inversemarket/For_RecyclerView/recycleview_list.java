@@ -1,24 +1,25 @@
 package ru.n3studio.inversemarket.For_RecyclerView;
 
+import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class recycleview_list {
-    Integer img;
+    Drawable img;
 
-    public recycleview_list(Integer img, String time) {
+    public recycleview_list(Drawable img, String time) {
         this.img = img;
         this.time = time;
     }
 
 
-    public Integer getImg() {
+    public Drawable getImg() {
         return img;
     }
 
-    public void setImg(Integer img) {
+    public void setImg(Drawable img) {
         this.img = img;
     }
 

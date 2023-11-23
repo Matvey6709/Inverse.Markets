@@ -10,8 +10,15 @@ import android.content.Intent;
 import android.os.Bundle;
 
 
+import com.google.gson.JsonArray;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
-import java.util.List;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -31,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
     ShopFragment shopFragment;
-    private static String s = "Token 201fde2f630ae9246e2b6e42f2c301246e5854dc";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,38 +48,14 @@ public class MainActivity extends AppCompatActivity {
 
         shopFragment = new ShopFragment();
         fragmentReplace(shopFragment);
-        Retrofit.Builder builder = new Retrofit.Builder()
-                .baseUrl("https://market.inverse-team.store/")
-                .addConverterFactory(GsonConverterFactory.create());
-        Retrofit retrofit = builder.build();
-        UserClient userClient = retrofit.create(UserClient.class);
 
-        Call<Shops> call = userClient.getShops(s);
-        call.enqueue(new Callback<Shops>() {
-            @Override
-            public void onResponse(Call<Shops> call, Response<Shops> response) {
-                if(response.isSuccessful()){
-                    Shops shops = new Shops();
-                    shops.setName(response.body().getName());
-                    shops.setCategory(response.body().getCategory());
-                    shops.setId(response.body().getId());
-                    System.out.println(response.body().getName()+"asfggggggggggg");
-                    System.out.println(response.body().toString()+"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb");
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Shops> call, Throwable t) {
-                System.out.println(t.getMessage());
-            }
-        });
 
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.shop_for_bottom_nav:
-                    startActivity(new Intent(this, Inf_supermarket_Activity.class));
-//                    fragmentReplace(new ShopFragment());
+//                    startActivity(new Intent(this, Inf_supermarket_Activity.class));
+                    fragmentReplace(new ShopFragment());
                     break;
                 case R.id.menu_for_bottom_nav:
                     fragmentReplace(new MenuFragment());

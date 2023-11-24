@@ -208,10 +208,14 @@ public class ShopFragment extends Fragment implements Callback<ResponseBody> {
         }
 
         protected void onPostExecute(Bitmap result) {
+            try {
+                recycleview_lists.add(new recycleview_list(new BitmapDrawable(getResources(), result), "от 45 мин"));
+                adapter = new Adapter_for_main_rv(recycleview_lists, v.getContext());
+                recyclerView.setAdapter(adapter);
+            }catch (Exception e){
+                return;
+            }
 
-            recycleview_lists.add(new recycleview_list(new BitmapDrawable(getResources(), result), "от 45 мин"));
-            adapter = new Adapter_for_main_rv(recycleview_lists, v.getContext());
-            recyclerView.setAdapter(adapter);
         }
 
     }

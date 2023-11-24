@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import ru.n3studio.inversemarket.R;
@@ -32,7 +34,16 @@ public class Adapter_for_supermarket_tovar extends RecyclerView.Adapter<Adapter_
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imageView.setImageResource(recycleview_lists.get(position).getImg());
+        Picasso.with(context)
+                .load(recycleview_lists.get(position).getImg())
+                .placeholder(R.drawable.ic_launcher_background).error(R.drawable.back_select)
+                .into(holder.imageView);
+//        if(recycleview_lists.get(position).getImg() != null){
+//            holder.imageView.setImageDrawable(recycleview_lists.get(position).getImg());
+//        }else {
+//            holder.imageView.setImageDrawable(context.getDrawable(R.drawable.ic_launcher_background));
+//        }
+
         holder.price.setText(recycleview_lists.get(position).getPrice());
         holder.mass.setText(recycleview_lists.get(position).getMass());
         holder.name.setText(recycleview_lists.get(position).getName());

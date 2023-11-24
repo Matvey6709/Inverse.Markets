@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 
 import com.google.gson.JsonArray;
@@ -45,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null && extras.getBoolean("close_reg")) {
+
+        }else {
+            startActivity(new Intent(this, RegistrActivity.class));
+        }
+        shopFragment = new ShopFragment();
 
         shopFragment = new ShopFragment();
         fragmentReplace(shopFragment);
